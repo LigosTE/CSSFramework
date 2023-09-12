@@ -1,0 +1,4 @@
+:root,
+:host {
+  --avatar-border-radius: 3; --avatar-color: #000000; --avatar-background: #ffffff;
+}
