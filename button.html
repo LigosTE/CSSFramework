@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Framwork</title>
+    <link rel="stylesheet" href="/src/blaze.css">
+    <link rel="stylesheet" href="/src/avatar.css">
+    <style>
+        :root {
+          --background: hsla(204, 25%, 3%);
+          --background-image: url(/assets/bgimage.jpg);
+        }
+        body::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: -1;
+          /* Colors are on purpose not referenced as token/variables, as we want this file to paint fast, and not be dependent on other files. The token value used below is --coolgrey-900 */
+          background-image: linear-gradient(177deg, transparent 30vh, var(--background) 150vh), var(--background-image);
+          background-repeat: no-repeat;
+          background-size: cover;
+          will-change: transform;
+        }
+        </style>
+</head>
+<body>
+    <header>
+        <div class="u-center-block u-letter-box-none">
+            <h1 class="c-heading u-centered u-large">Hello Again Local!</h1>
+        </div>
+    </header>
+</body>
+</html>

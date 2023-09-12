@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Framwork</title>
+    <link rel="stylesheet" href="/src/blaze.css">
+    <link rel="stylesheet" href="/src/avatar.css">
+    <style>
+        :root {
+          --background: hsla(204, 25%, 3%);
+          --background-image: url(/assets/bgimage.jpg);
+        }
+        body::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: -1;
+          /* Colors are on purpose not referenced as token/variables, as we want this file to paint fast, and not be dependent on other files. The token value used below is --coolgrey-900 */
+          background-image: linear-gradient(177deg, transparent 30vh, var(--background) 150vh), var(--background-image);
+          background-repeat: no-repeat;
+          background-size: cover;
+          will-change: transform;
+        }
+        </style>
+    <style>
+        .centered {
+            position: relative;
+            top: 5px;
+            bottom: 10%;    
+            left: 40%;
+            right: 0%;
+        }
+    </style>
+</head>
+<body>
+    <aside aria-label="Demo drawer" aria-expanded class="o-drawer u-highest u-small o-drawer--left o-drawer--visible">
+        <div class="c-card">
+            <div class="c-avatar u-large centered">
+                <img class="c-avatar__img u-higher" alt="avatar" src="/assets/blazeUI.png">
+            </div>
+            <header class="c-card__header">
+                <h2 class="c-heading">
+                    Редакторы с подсведкой кода. Плагины для Web-разработки
+                </h2>
+            </header>
+            <footer class="c-card__footer">
+                <button type="button" class="c-button c-button--block u-medium" onclick="location.href = 'button.html';">VS Code</button>
+                <button type="button" class="c-button c-button--block u-medium" onclick="location.href = 'button.html';">Sublime Text</button>
+                <button type="button" class="c-button c-button--block u-medium" onclick="location.href = 'button.html';">Atom</button>
+                <button type="button" class="c-button c-button--block u-medium" onclick="location.href = 'button.html';">WebStorm</button>
+            </footer>
+        </div>
+      </aside>
+</body>
+</html>
