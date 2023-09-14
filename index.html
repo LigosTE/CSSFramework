@@ -3,50 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Framwork</title>
+    <title>CSS Framework</title>
     <link rel="stylesheet" href="./src/blaze.css">
     <link rel="stylesheet" href="./src/avatar.css">
     <link rel="stylesheet" href="./src/style.css">
 </head>
 <body>
-    <aside class="o-drawer u-highest u-small o-drawer--left o-drawer--visible">
-        <div class="c-card">
+    <aside class="left-menu u-higher" id="leftmenu">
+        <div class="o-container--xsmall">
             <div class="c-avatar u-large">
                 <a href="./">
-                  <img class="c-avatar__img u-higher" alt="avatar" src="./assets/blazeUI.png">
+                    <img class="c-avatar__img u-high" alt="avatar" src="./assets/blazeUI.png">
                 </a>
-              </div>
-            <header class="c-card__header">
-                <h2 class="c-heading" style="color: black;">
-                    Редакторы с подсведкой кода. Плагины для Web-разработки
-                </h2>
-            </header>
+            </div>
+            <h2 class="c-heading">Редакторы с подсведкой кода. Плагины для Web-разработки</h2>
             <footer class="c-card__footer">
-                <button type="button" class="c-button c-button--block u-medium" onclick="location.href = 'button.html';">VS Code</button>
-                <button type="button" class="c-button c-button--block u-medium" onclick="location.href = 'button.html';">Sublime Text</button>
-                <button type="button" class="c-button c-button--block u-medium" onclick="location.href = 'button.html';">Atom</button>
-                <button type="button" class="c-button c-button--block u-medium" onclick="location.href = 'button.html';">WebStorm</button>
-                <button type="button" class="c-button c-button--block u-medium" onclick="location.href = 'button.html';">Atom</button>
-                <button type="button" class="c-button c-button--block u-medium" onclick="location.href = 'button.html';">WebStorm</button>
+                <button type="button" class="c-button c-button--block u-medium" onclick="location.href = 'pycharm.html';">PyCharm</button>
+                <button type="button" class="c-button c-button--block u-medium" onclick="location.href = 'visualstudio.html';">Visual Studio</button>
+                <button type="button" class="c-button c-button--block u-medium" onclick="location.href = 'sublimetext.html';">Sublime Text</button>
+                <button type="button" class="c-button c-button--block u-medium" onclick="location.href = 'colorzilla.html';">ColorZilla</button>
+                <button type="button" class="c-button c-button--block u-medium" onclick="location.href = 'csspeeper.html';">CSS Peeper</button>
+                <button type="button" class="c-button c-button--block u-medium" onclick="location.href = 'windowresizer.html';">Window Resizer</button>
             </footer>
         </div>
-      </aside>
-    <nav>
-        <ul>
-            <li><a href="./contacts.html">Контакты</a></li>
-            <li><a href="./about.html">О нас</a></li>
-            <li><a href="./">Главная</a></li>
-          </ul>
-    </nav>
-    <div class="main">
-        <div class="main greet">
-            <h1 class="c-heading u-super u-centered">
-                Hello World!
-                <div class="c-heading__sub u-centered">Давно не виделись</div>
-              </h1>
+    </aside>
+    <div class="flex-wrapper">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="./contacts.html">Контакты</a></li>
+                    <li><a href="./about.html">О нас</a></li>
+                    <li><a href="./">Главная</a></li>
+                  </ul>
+            </nav>
+        </header>
+        <div class="content">
+            <div class="greet">
+                <h1 class="c-heading u-super u-centered">
+                    Hello World!
+                    <div class="c-heading__sub u-centered">Давно не виделись</div>
+                </h1>
+            </div>
+            <div class="products o-container--xlarge u-centered" id="products">
+                <a href="./pycharm.html">
+                    <div class="product pycharm">
+                        <h1 class="c-heading">PyCharm</h1>
+                        <p class="c-paragraph">Кроссплатформенная интегрированная среда разработки для языка программирования Python, разработанная компанией JetBrains на основе IntelliJ IDEA. Предоставляет пользователю комплекс средств для написания кода и визуальный отладчик.</p>
+                    </div>
+                </a>
+                <a href="./visualstudio.html">
+                    <div class="product visual-studio">
+                        <h1 class="c-heading">Visual Studio</h1>
+                        <p class="c-paragraph">Линейка продуктов компании Microsoft, включающих интегрированную среду разработки программного обеспечения и ряд других инструментов.</p>
+                    </div>
+                </a>
+                <a href="./sublimetext.html">
+                    <div class="product sublime-text">
+                        <h1 class="c-heading">Sublime Text</h1>
+                        <p class="c-paragraph">Проприетарный текстовый редактор. Поддерживает плагины на языке программирования Python.</p>
+                    </div>
+                </a>
+                <a href="./colorzilla.html">
+                    <div class="product colorzilla">
+                        <h1 class="c-heading">ColorZilla</h1>
+                        <p class="c-paragraph">Инструмент помогает быстро определить значения цветов на странице сайта, что значительно экономит время.</p>
+                    </div>
+                </a>
+                <a href="./csspeeper.html">
+                    <div class="product css-peeper">
+                        <h1 class="c-heading">CSS Peeper</h1>
+                        <p class="c-paragraph">С этим расширением найти элемент и его стили на странице намного проще, чем с помощью встроенного инструмента Inspect Element.</p>
+                    </div>
+                </a>
+                <a href="./windowresizer.html">
+                    <div class="product window-resizer">
+                        <h1 class="c-heading">Window Resizer</h1>
+                        <p class="c-paragraph">Плагин позволяет переключаться на необходимые размеры окна браузера, имитируя разные разрешения экрана</p>
+                    </div>
+                </a>
+            </div>
         </div>
         <footer>
-            <p>Made using BlazeUI by Shebolkin 2023</p>
+            Made using BlazeUI by Shebolkin 2023
         </footer>
     </div>
 </body>
