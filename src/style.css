@@ -7,7 +7,6 @@
 
 body {
     background: url(./../assets/bgimage.jpg);
-    background-color: linear-gradient(hsl(0, 0%, 15%), hsl(0, 0%, 0%))
     background-size: cover;
     background-position: center;
     width: 100%;
